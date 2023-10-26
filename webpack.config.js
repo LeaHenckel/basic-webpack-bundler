@@ -8,7 +8,12 @@ module.exports = {
 	mode: "production",
 	plugins: [new MiniCssExtractPlugin(), new HtmlWebpackPlugin({
 		template: path.resolve(__dirname, "src", "index.html")
-	})],
+	})
+	/* følgende skal indsættes ved oprettelse af ethvert nyt HTML dokument, HUSK at ændre dokument-navn:
+	 new HtmlWebpackPlugin({
+		template: path.resolve(__dirname, "src", "hej.html"),
+		filename: "hej.html"
+	})*/], 
 	module: {
 		rules: [
 			{
